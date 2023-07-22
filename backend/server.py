@@ -3,7 +3,7 @@ import binascii
 import pickle
 import numpy as np
 from keras.preprocessing import image
-from keras.preprocessing.sequence import pad_sequences
+from keras.utils import pad_sequences
 from keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
 from keras.models import Model, load_model
 from flask import Flask,render_template,request,jsonify
