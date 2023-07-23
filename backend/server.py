@@ -48,16 +48,16 @@ def process_data():
             processed_photo_new=processed_photo.reshape((1,2048))
             print(processed_photo_new.shape)
             in_text = "startseq"
-            for i in range(35):
-                sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
-                sequence = pad_sequences([sequence],maxlen=35,padding='post')
+            # for i in range(35):
+            #     sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
+            #     sequence = pad_sequences([sequence],maxlen=35,padding='post')
                 
-                ypred = model.predict([processed_photo_new,sequence])
-                ypred = ypred.argmax() #WOrd with max prob always - Greedy Sampling
-                word = idx_to_word[ypred]
-                in_text += (' ' + word)
-                if word == "endseq":
-                    break
+            #     ypred = model.predict([processed_photo_new,sequence])
+            #     ypred = ypred.argmax() #WOrd with max prob always - Greedy Sampling
+            #     word = idx_to_word[ypred]
+            #     in_text += (' ' + word)
+            #     if word == "endseq":
+            #         break
 
             final_caption = in_text.split()[1:-1]
             final_caption = ' '.join(final_caption)
