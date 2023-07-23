@@ -7,11 +7,14 @@ from keras.applications.resnet import ResNet50, preprocess_input, decode_predict
 from keras.models import Model, load_model
 from flask import Flask,render_template,request,jsonify, send_from_directory
 from flask_cors import CORS
+
 app=Flask(__name__,static_folder="build/static",template_folder="build")
 CORS(app)
+
 model = load_model('model_9.h5')
 modelres = ResNet50(weights="imagenet",input_shape=(224,224,3))
 model_new = Model(modelres.input,modelres.layers[-2].output)
+
 with open('saved_idx_to_wordy.pkl', 'rb') as f:
     idx_to_word = pickle.load(f)
 with open('saved_word_to_idx.pkl', 'rb') as f:
@@ -48,16 +51,16 @@ def process_data():
             processed_photo_new=processed_photo.reshape((1,2048))
             print(processed_photo_new.shape)
             in_text = "startseq"
-            # for i in range(35):
-            #     sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
-            #     sequence = pad_sequences([sequence],maxlen=35,padding='post')
+            for i in range(35):
+                sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
+                sequence = pad_sequences([sequence],maxlen=35,padding='post')
                 
-            #     ypred = model.predict([processed_photo_new,sequence])
-            #     ypred = ypred.argmax() #WOrd with max prob always - Greedy Sampling
-            #     word = idx_to_word[ypred]
-            #     in_text += (' ' + word)
-            #     if word == "endseq":
-            #         break
+                ypred = model.predict([processed_photo_new,sequence])
+                ypred = ypred.argmax()
+                word = idx_to_word[ypred]
+                in_text += (' ' + word)
+                if word == "endseq":
+                    break
 
             final_caption = in_text.split()[1:-1]
             final_caption = ' '.join(final_caption)

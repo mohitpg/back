@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import uploadimg from "./upload.jpg";
@@ -26,7 +25,7 @@ function App() {
       try {
         setLoading(true);
         setLoading2(false);
-        const response = await axios.post('https://backtemp.onrender.com/api', imageData,{
+        const response = await axios.post('/api', imageData,{
               headers: {
                 'Content-Type':'application/json',
               }
