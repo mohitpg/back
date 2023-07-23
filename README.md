@@ -1,10 +1,4 @@
-# Image Caption
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/jmorganca/ollama/assets/3325447/56ea1849-1284-4645-8970-956de6e51c3c">
-    <img alt="logo" height="200px" src="https://github.com/jmorganca/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7">
-  </picture>
-</div>
+## Image Caption
 
 # Overview
 This repository contains an Image Captioning web application developed using Keras and React and deployed using Flask. The project aims to generate descriptive captions for uploaded images using a deep learning model.
@@ -19,17 +13,38 @@ This repository contains an Image Captioning web application developed using Ker
 </ul>
 
 # Installation
-1. Run
- `git clone https://github.com/mohitpg/back.git`
-2. Go to folder back/backend
-3. Run
- `python -m venv <path>`
-4. Activate
-Bash `source <path>/bin/activate`
-Windows `<path>\Scripts\activate.bat`
-5. Run
-`pip install -r requirements.txt`
-6. Finally run
-`python server.py`
+1. Run <br>
+ `git clone https://github.com/mohitpg/back.git` <br>
+2. Go to folder back/backend <br>
+3. Run <br>
+ `python -m venv <path>` <br>
+4. Activate <br>
+Bash `source <path>/bin/activate` <br>
+Windows `<path>\Scripts\activate.bat` <br>
+5. Run <br>
+`pip install -r requirements.txt` <br>
+6. Finally run <br>
+`python server.py` <br>
+This will run the server at localhost port:5000
+
+# Acknowledgements
+The model architecture and training code were adapted from <a href='https://towardsdatascience.com/image-captioning-with-keras-teaching-computers-to-describe-pictures-c88a46a311b8'> Harshall Lamba's Article </a>
+
+# Screenshots
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss1.png">
+    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss1.png">
+    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss2.png">
+    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss2.png">
+    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss3.png">
+    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss3.png">
+  </picture>
+</div>
+
+# Contact
+mohitp.gupta1102@gmail.com <br>
+mohitprabhavgupta_se21a14_57@dtu.ac.in
+
 
 
