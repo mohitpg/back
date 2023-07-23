@@ -17,14 +17,14 @@ This repository contains an Image Captioning web application developed using Ker
  `git clone https://github.com/mohitpg/back.git` <br>
 2. Go to folder back/backend <br>
 3. Run <br>
- `python -m venv <path>` <br>
+ ```python -m venv <path>``` <br>
 4. Activate <br>
-Bash `source <path>/bin/activate` <br>
-Windows `<path>\Scripts\activate.bat` <br>
+Bash ```source <path>/bin/activate``` <br>
+Windows ```<path>\Scripts\activate.bat``` <br>
 5. Run <br>
-`pip install -r requirements.txt` <br>
+```pip install -r requirements.txt``` <br>
 6. Finally run <br>
-`python server.py` <br>
+```python server.py``` <br>
 This will run the server at localhost port:5000
 
 # Acknowledgements
@@ -32,14 +32,9 @@ The model architecture and training code were adapted from <a href='https://towa
 
 # Screenshots
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss1.png">
-    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss1.png">
-    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss2.png">
-    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss2.png">
-    <source media="(prefers-color-scheme: dark)" height="200px" srcset="https://github.com/mohitpg/back/frontend/public/ss3.png">
-    <img alt="logo" height="200px" src="https://github.com/mohitpg/back/frontend/public/ss3.png">
-  </picture>
+ ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss1.png?raw=true)
+ ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss2.png?raw=true)
+ ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss3.png?raw=true)
 </div>
 
 # Contact
