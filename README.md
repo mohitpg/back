@@ -32,9 +32,12 @@ The model architecture and training code were adapted from <a href='https://towa
 
 # Screenshots
 <div align="center">
- ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss1.png?raw=true)
- ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss2.png?raw=true)
- ![alt text](https://github.com/mohitpg/back/blob/main/frontend/public/ss3.png?raw=true)
+ <img src='https://github.com/mohitpg/back/blob/main/frontend/public/ss1.png?raw=true'>
+ 
+ <img src='https://github.com/mohitpg/back/blob/main/frontend/public/ss2.png?raw=true'>
+ 
+ <img src='https://github.com/mohitpg/back/blob/main/frontend/public/ss3.png?raw=true'>
+
 </div>
 
 # Contact
