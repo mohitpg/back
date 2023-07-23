@@ -5,9 +5,9 @@ import numpy as np
 from keras.utils import pad_sequences, load_img, img_to_array
 from keras.applications.resnet import ResNet50, preprocess_input, decode_predictions
 from keras.models import Model, load_model
-from flask import Flask,render_template,request,jsonify
+from flask import Flask,render_template,request,jsonify, send_from_directory
 from flask_cors import CORS
-app=Flask(__name__,template_folder="../frontend/public")
+app=Flask(__name__,static_folder="build/static",template_folder="build")
 CORS(app)
 model = load_model('model_9.h5')
 modelres = ResNet50(weights="imagenet",input_shape=(224,224,3))
@@ -17,7 +17,11 @@ with open('saved_idx_to_wordy.pkl', 'rb') as f:
 with open('saved_word_to_idx.pkl', 'rb') as f:
     word_to_idx = pickle.load(f)
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/')
+def serve():
+    return render_template('index.html')
+
+@app.route('/api', methods=['GET','POST'])
 def process_data():
     processed_data = "Oops something went wrong 😔 Please reload the page and try again"
     data = request.get_json()
