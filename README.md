@@ -1,4 +1,8 @@
-## Image Caption
+# Image Caption
+```
+Warning: The webapp may take a lot of time to load and may crash due to memory constraints of Render.com
+
+```
 
 # Overview
 This repository contains an Image Captioning web application developed using Keras and React and deployed using Flask. The project aims to generate descriptive captions for uploaded images using a deep learning model.
