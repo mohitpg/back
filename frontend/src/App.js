@@ -26,7 +26,7 @@ function App() {
       try {
         setLoading(true);
         setLoading2(false);
-        const response = await axios.post('/api', imageData,{
+        const response = await axios.post('https://backtemp.onrender.com/api', imageData,{
               headers: {
                 'Content-Type':'application/json',
               }
