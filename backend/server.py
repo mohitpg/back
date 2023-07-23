@@ -2,8 +2,7 @@ import base64
 import binascii
 import pickle
 import numpy as np
-from keras.preprocessing import image
-from keras.utils import pad_sequences
+from keras.utils import pad_sequences, load_img, img_to_array
 from keras.applications.resnet import ResNet50, preprocess_input, decode_predictions
 from keras.models import Model, load_model
 from flask import Flask,render_template,request,jsonify
@@ -28,8 +27,8 @@ def process_data():
     processed_data=0
     def predict_caption(photo):
         def preprocess_img(img):
-            img = image.load_img(img,target_size=(224,224))
-            img = image.img_to_array(img)
+            img = load_img(img,target_size=(224,224))
+            img = img_to_array(img)
             img = np.expand_dims(img,axis=0)
             # Normalisation
             img = preprocess_input(img)
