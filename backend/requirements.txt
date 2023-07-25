@@ -4,3 +4,4 @@ flask_cors
 tensorflow==2.11.0
 gunicorn
 pillow
+cv2
