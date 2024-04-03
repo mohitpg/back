@@ -11,7 +11,7 @@ from flask_cors import CORS
 app=Flask(__name__,static_folder="build/static",template_folder="build")
 CORS(app)
 
-model = load_model('model_9.h5')
+model = load_model('./model1.h5')
 modelres = ResNet50(weights="imagenet",input_shape=(224,224,3))
 model_new = Model(modelres.input,modelres.layers[-2].output)
 
