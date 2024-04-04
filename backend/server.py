@@ -2,10 +2,11 @@ import base64
 import binascii
 import pickle
 import numpy as np
+import requests
 from keras.utils import pad_sequences, load_img, img_to_array
 from keras.applications.resnet import ResNet50, preprocess_input, decode_predictions
 from keras.models import Model, load_model
-from flask import Flask,render_template,request,jsonify, send_from_directory
+from flask import Flask,render_template,request,jsonify
 from flask_cors import CORS
 
 app=Flask(__name__,static_folder="build/static",template_folder="build")
@@ -54,7 +55,9 @@ def process_data():
             for i in range(35):
                 sequence = [word_to_idx[w] for w in in_text.split() if w in word_to_idx]
                 sequence = pad_sequences([sequence],maxlen=35,padding='post')
-                
+                tbposted={"instances":[[processed_photo_new,sequence]]}
+                res = requests.post('http://localhost:8501/v1/models/model:predict', json=tbposted)
+                print(res)
                 ypred = model.predict([processed_photo_new,sequence])
                 ypred = ypred.argmax()
                 word = idx_to_word[ypred]
