@@ -65,7 +65,7 @@ function App() {
           <input type="file" name="imageinput" onChange={handleChange} style={{margin:'1px -10% 1px auto'}}/>
         </Form>
         <Card.Body>
-          <Card.Title style={{fontFamily: 'Oswald', fontSize: '3rem'}}>Image Transcriber</Card.Title>
+          <Card.Title style={{fontFamily: 'Oswald', fontSize: '3rem'}}>Image Captioner</Card.Title>
           <Card.Text style={{fontFamily: 'Alegreya Sans', fontSize: '1.5rem'}}>
           Upload an image and generate captions for it!
           </Card.Text>
