@@ -1,35 +1,22 @@
 # Image Caption
-```
-Warning: The webapp may take a lot of time to load and may crash due to memory constraints of Render.com
 
-```
-
-# Overview
-This repository contains an Image Captioning web application developed using Keras and React and deployed using Flask. The project aims to generate descriptive captions for uploaded images using a deep learning model.
+This repository contains a production grade machine learning model served by tensorflow-serving and flask which performs image captioning with a front end interface designed with React.
 
 # Key Features
 <ul>
 <li>User-friendly web interface for uploading images.</li>
 <li>Backend powered by Flask, enabling seamless communication with the deep learning model.</li>
 <li>The deep learning model is built using Keras, leveraging pre-trained convolutional neural networks (CNN) and recurrent neural networks (RNN) for image feature extraction and caption generation, respectively.</li>
+<li>Dockerized the entire application for installability</li>
 <li>Real-time image processing and caption generation.</li>
 <li>Easy-to-understand UI built with React, allowing a smooth user experience.</li>
 </ul>
 
 # Installation
-1. Run <br>
- `git clone https://github.com/mohitpg/back.git` <br>
-2. Go to folder back/backend <br>
-3. Run <br>
- ```python -m venv <path>``` <br>
-4. Activate <br>
-Bash ```source <path>/bin/activate``` <br>
-Windows ```<path>\Scripts\activate.bat``` <br>
-5. Run <br>
-```pip install -r requirements.txt``` <br>
-6. Finally run <br>
-```python server.py``` <br>
-This will run the server at localhost port:5000
+1. Run  `git clone https://github.com/mohitpg/ImageCaption.git` <br>
+2. Go to the folder ImageCaption. <br>
+3. Run `docker-compose up`. <br>
+4. The application can be accessed at localhost:5000
 
 # Acknowledgements
 The model architecture and training code were adapted from <a href='https://towardsdatascience.com/image-captioning-with-keras-teaching-computers-to-describe-pictures-c88a46a311b8'> Harshall Lamba's Article </a>
@@ -44,9 +31,6 @@ The model architecture and training code were adapted from <a href='https://towa
 
 </div>
 
-# Contact
-mohitp.gupta1102@gmail.com <br>
-mohitprabhavgupta_se21a14_57@dtu.ac.in
 
 
 
