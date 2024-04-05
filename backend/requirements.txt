@@ -2,6 +2,5 @@ flask
 numpy
 flask_cors
 tensorflow==2.13.0
-gunicorn
 pillow
 opencv-python
